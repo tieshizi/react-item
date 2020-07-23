@@ -1,0 +1,28 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { Provider } from "react-redux"
+import store from "./store"
+
+// const render = () => {
+//     ReactDOM.render(
+//         <Provider store={store}>
+//             <App
+//                 OnAdd={() => store.dispatch({ type: 'OnAdd' })}
+//                 OnMinus={() => store.dispatch({ type: 'OnMinus' })}
+//                 value={store.getState()}
+//             />
+//         </Provider>
+//         , document.getElementById('root'));
+// }
+// render()
+// store.subscribe(render)
+
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('root'));
+
+
